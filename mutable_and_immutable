@@ -1,8 +1,21 @@
 # mutable and immutable
 mutable => list, set, dictionary
 
+mutable한 객체 arr1과 arr2에서 
+arr1 = [1,2,3], arr2 = arr1하면 arr2.append(~)해도 arr1에 반영
+#arr2가 메모리값만 참조했기 때문
+
 immutable  => int, float, tuple, str, bool
 immutable은 하나의 immutable 값에 여러 개의 참조가 붙음
+
+
+immutable한 객체들은 얕은복사를 하던 깊은 복사를 하던 상관이 없다 왜냐하면 해당 객체들은 값이 변경되면
+무조건 참조가 변경되기 때문
+ex>
+num1 = 3, num2 = num1 했을때 둘은 같은 메모리를 가리키지만, num2의 값을 변경하면 num2는 다른
+메모리를 가리킴
+
+
 immutable 한 str의 경우, 
 s1 = "BlockDMask"
 s2 = "BlockDMask"
@@ -10,3 +23,10 @@ s2 = "BlockDMask"
 s1 = s1.replace('D', 'ZZZ')
 s2 = "BlockZZZMask"
 이런식으로 동일하게 바꿔도 이제는 s1과 s2가 동일한 메모리를 가리키지 않음
+
+결론.
+python 에서 함수를 작성하고 내부에 매개변수로 llist를 받아서 함수 내에서 값을 변경해도 global 하게
+list의 값이 바뀐다. 왜냐하면 함수 내부의 list도 함수 외부의 list의 주소를 참조한 것이기 때문이다.
+하지만 python에서 매개변수로 num을 받고 함수 내부에서 num의 값을 변경 해도 함수 외부 변수의 값에는
+영향이 없다. 왜냐하면 함수 내부의 변수의 값을 변경하는 순간 함수 내부 변수는 다른 메모리를 가리키기
+때문이다. 따라서 함수 내부 변수에서 외부 변수(immutable한)를 변경하고 싶으면 global을 사용해야 한다.
