@@ -1,0 +1,22 @@
+findall은 하나 이상의 그룹이 패턴에 포함되면, 결과값으로 튜플 리스트를 반환한다.
+findall은 이 코드에서
+
+import re
+sentence = input()
+p = re.compile(r'(dz=)|([ln]j)|(\w\W)')
+print(p.findall(sentence))
+
+#input ljes=njak
+#output 
+[('', 'lj', ''), ('', '', 's='), ('', 'nj', '')]
+각 그룹에 해당하는 요소를 포함하고 해당 안하는 요소는 빈칸으로 가지는 tuple 리스트를 반환
+
+이 코드에서는
+import re
+sentence = input()
+p = re.compile(r'dz=|[ln]j|\w\W')
+print(p.findall(sentence))
+
+#output
+['lj', 's=', 'nj']
+그냥 패턴에 해당하는 내용만 반환
