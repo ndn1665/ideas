@@ -1,0 +1,27 @@
+내장함수
+#eval
+문자열로 수학 수식이 들어오면 처리
+ex> eval("3+5") => 8
+
+itertools
+from itertools import permutation # 순열
+data = ['a','b','c']
+permutation(data,3)#3은 data에서 3개를 뽑는다는 뜻
+result = list(permutation(data,2))
+result => [('a','b') , ('a','c') '''etc ]
+from itertools import combination # 조합
+from itertools import product # 중복 허용 순열
+ex> list(product(data, repeat = 2)) # repeat 2개를 뽑아서 중복순열
+from itertools import combination_with_replacement # 중복 허용 조합
+ex> list(combination_with_replacement(data,2))
+
+collections
+from collections import deque
+from collections import Counter # 등장횟수 출력
+
+math
+import math
+math.factorial(5) # 팩토리얼
+math.sqrt(7) # 제곱근
+math.gcd(21,14) #최대공약수
+math.pi , math.e # 자연상수
