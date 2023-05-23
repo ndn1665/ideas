@@ -1,0 +1,44 @@
+#round() 반올림함수
+round(123.456, 2) == 123.46
+
+# functions for list
+# reverse, insert, remove
+a = [1,2,3]
+a.reverse() => a = [3,2,1]
+a.insert(4값,3인덱스) => a = [1,2,3,4]
+a.remove(1) => a = [2,3,4] 1이 여러개여도 한개만 삭제
+remove 보다는 remove_set 활용
+ex>
+a = [1,2,3,4,5,5,5]
+remove_set = {3,5}
+result = [i for i in a if i not in remove_set]
+result == [1,2,4]
+
+#문자열반복
+string = 'hello'
+string*3 == 'hellohellohello'
+
+#dict functions
+data = dict()
+data.keys() => key list
+data.values() => value list
+
+#set
+a = {1,2,3}
+b = {3,4,5}
+집합자료형의 연산
+합집합 => a|b => {1,2,3,4,5}
+교집합 => a&b => {3}
+차집합 => a -b => {1,2}
+remove 함수는 set에서 쓰는게 효율적(시간복잡도가 O(1) 리스트에선 O(n))
+data 여러개 추가 => update => a.update([6,7]) => {1,2,3,6,7}
+한개추가는 add => a.add(8)
+
+#pass
+일단은 아무것도 처리하고 싶지 않을때 적어놓는 습관 들이기
+if score > 80:
+    pass#이런식으로 주석으로 기능 적어놓기
+else:
+    pass
+
+
