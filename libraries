@@ -17,7 +17,7 @@ ex> list(combination_with_replacement(data,2))
 
 collections
 from collections import deque
-from collections import Counter # 등장횟수 출력
+from collections import Counter # 등장횟수 출력 #dict형태로 반환
 
 math
 import math
