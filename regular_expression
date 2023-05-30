@@ -29,3 +29,10 @@ p = re.compile(r'(\d{6})-\d{7}')
 m = p.sub('\g<1>-*******',str)
 #output
 #noh 010917-*******
+
+re.split('패턴',문자열)
+>>> a='Beautiful, is; better*than\nugly'
+>>> import re
+>>> re.split('; |, |\*|\n',a)
+['Beautiful', 'is', 'better', 'than', 'ugly']
+
