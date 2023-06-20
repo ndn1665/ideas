@@ -2,6 +2,11 @@
 리스트 내포 이중 반복 그리고 if 문 넣기
 list = [x*y for x in range(10) if x%2 for y in range(10)]#앞에 for문이 바깥 for문이고, 뒤의 for문이 안쪽 for문
 
+리스트내포안에 if문만 넣을때
+list = [i for i in x if i%2 ==0]
+리스트내포안에 if-else문 넣을때
+list = [1 if i%2 ==0 else 2 for i in x] 
+
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 flat = [x for row in matrix for x in row] # 앞에 for 문이 바깥 for문이고 뒤에 for문이 내부 for문이다.
 # [1, 2, 3, 4, 5, 6, 7, 8, 9]
